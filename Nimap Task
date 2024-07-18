@@ -1,0 +1,75 @@
+1) Bash Simple File Size :
+
+#!/bin/bash
+touch myfile.txt
+
+echo "Hello world" >> myfile.txt
+varOcg=$(stat -c%s "myfile.txt")
+echo "Size of myfile.txt: $varOcg bytes"
+
+2) Docker Install Python:
+
+#!/bin/bash
+varOcg="OCG_VALUE_1"
+anotherOcgVar="OCG_VALUE_2"
+
+dockerfile_content="FROM python:3
+RUN pip install numpy scipy pandas
+CMD [\"python\", \"./main.py\"]"
+
+echo "$dockerfile_content" > Dockerfile 
+
+sha1sum Dockerfile | cut -d' ' -f1 > hash.txt
+rm hash.txt
+echo "HASH_OUTPUT Dockerfile"
+echo "$hast_output"
+
+
+3) Git Stashing:
+
+#!/bin/bash
+git clone https://github.com/coderbyte-org/big-o 
+cd big-o 
+
+git checkout -b feat/add-new-file
+
+echo "New content" > newfile.txt
+
+git add newfile.txt
+
+git commit -m "feat: add new file"
+
+git status $$
+git log --pretty=format:$s -n 1
+
+
+4)String changes:
+
+def StringChanges(strParam):
+  # code goes here
+  new_str = ""
+  prev_char = None
+  for char in strParam:
+    char = char.lower()
+    if char == "m":
+      if prev_char:
+        new_str += prev_char * 2
+      prev_char = None
+    elif char == "n":
+      if prev_char:
+        pass
+      prev_char = None
+    else:
+      new_str += char
+    prev_char = char
+  return new_str 
+  
+#keep this function call here 
+#print(StringChanges("MrtyNNgMM"))
+#print(StringChanges("oMoMkkMrrN"))
+
+#user_input = sys.stdin.read().strip()
+#print(StringChanges(user_input))
+print(StringChanges(input()))
+echo "HASH_OUTPUT Dockerfile"
+echo "$hast_output"
